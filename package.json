@@ -15,8 +15,8 @@
     "start": "rollup -c -w",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "build-storybook -c .storybook -o .out",
+    "deploy": "gh-pages -d .out"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -44,7 +44,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^2.1.1",
-    "rollup": "^0.62.0",
+    "rollup": "^0.67.3",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.3.0",
@@ -54,5 +54,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "styled-components": "^4.1.2"
+  }
 }
