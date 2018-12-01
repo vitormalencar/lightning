@@ -1,5 +1,3 @@
-# lightning
-
 <!-- [![NPM](https://img.shields.io/npm/v/lightning.svg)](https://www.npmjs.com/package/lightning) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) -->
 
 <p align="center">
