@@ -3,7 +3,7 @@
 <!-- [![NPM](https://img.shields.io/npm/v/lightning.svg)](https://www.npmjs.com/package/lightning) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) -->
 
 <p align="center">
-  <img src="artwork2.png" width="auto" alt="lightning logo">
+  <img src="artwork.png" width="auto" alt="lightning logo">
 </p>
 <h1 align="center"> lightning </h1>
 <p align="center">The <strong>Super</strong> component library</p>
