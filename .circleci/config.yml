@@ -17,7 +17,7 @@ jobs:
             - v1-dependencies-
 
       - run:
-          name: "Checking Versions"
+          name: 'Checking Versions'
           command: |
             node --version
             npm --version
@@ -31,3 +31,7 @@ jobs:
 
       # run tests!
       - run: npm run test
+
+      - run:
+        name: Deploy to GH pages
+        command: npm run deploy
