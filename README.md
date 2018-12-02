@@ -1,9 +1,14 @@
-<!-- [![NPM](https://img.shields.io/npm/v/lightning.svg)](https://www.npmjs.com/package/lightning) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) -->
-
 <p align="center">
   <img src="artwork.png" width="auto" alt="lightning logo">
 </p>
-<h1 align="center"> lightning </h1>
+<h1 align="center">
+lightning
+<br>
+<a href="https://circleci.com/gh/vitormalencar/lightning/">
+<img src="https://circleci.com/gh/vitormalencar/lightning/tree/master.svg?style=svg" alt="circleCi">
+</a>
+</h1>
+
 <p align="center">The <strong>Super</strong> component library</p>
 
 ---
