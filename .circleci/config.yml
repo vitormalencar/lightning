@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:11
 
     working_directory: ~/repo
 
@@ -15,6 +15,12 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
+
+      - run:
+          name: "Checking Versions"
+          command: |
+            node --version
+            npm --version
 
       - run: npm install
 
