@@ -4,7 +4,7 @@ const theme = {
   primaryDark: '#0042cb',
   primaryLight: '#969bff',
   secondaryDark: '#6b40cb',
-  secondaryLight: '#d49eff'
+  secondaryLight: '#d49eff',
 }
 
 export default theme
