@@ -16,7 +16,7 @@ const output = [
 ].map(r => ({ ...r, globals }));
 
 export default {
-  external: ["styled-components"],
+  external: ["styled-components", "polished"],
   input: "src/index.js",
   output,
   plugins: [
