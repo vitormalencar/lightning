@@ -1,32 +1,56 @@
-import theme from './shared/Theme'
-import styled, { css } from 'styled-components'
+import theme from "./shared/Theme";
+import styled, { css } from "styled-components";
+import { darken } from "polished";
 
-const ButtonBase = css`
+export const ButtonBase = css`
   font-size: 1em;
   margin: 1em;
   padding: 0.5em 1em;
   border-radius: 3px;
   border: 2px solid;
-`
+`;
+
+export const BlockBase = css`
+  width: 100%;
+  display: block;
+`;
+export const DarkenMixing = darkerColor => darken(0.2, theme[darkerColor]);
+export const ThemeMixing = currentTheme => theme[currentTheme];
 
 export const Button = styled.button`
-  ${ButtonBase}
+  ${ButtonBase};
   color: #ffff;
-  background-color:${props => theme[props.theme] || theme.primary};
-  border-color: ${props => theme[props.theme] || theme.primary};
-`
+  background-color: ${props => ThemeMixing(props.theme)}
+  border-color: ${props => ThemeMixing(props.theme)}
+  :hover {
+    background-color: ${props => DarkenMixing(props.theme)}
+    border-color: ${props => DarkenMixing(props.theme)}
+    }
+`;
+
+Button.defaultProps = {
+  theme: "primary"
+};
 
 export const ButtonLight = styled.button`
   ${ButtonBase}
-  color: ${props => theme[props.theme] || theme.primary};
-  border-color: ${props => theme[props.theme] || theme.primary};
-`
+  color: ${props => ThemeMixing(props.theme)}
+  border-color: ${props => ThemeMixing(props.theme)}
+  :hover {
+    color:#ffff;
+    background-color: ${props => DarkenMixing(props.theme)}
+    border-color: ${props => DarkenMixing(props.theme)}
+  }
+`;
 
-export const ButtonBlock = styled.button`
-  ${ButtonBase}
-   width:100%;
-  display: block;
-  color: ${props => theme[props.theme] || theme.primary};
-  border-color: ${props => theme[props.theme] || theme.primary};
-`
+ButtonLight.defaultProps = {
+  theme: "primary"
+};
 
+export const ButtonBlock = styled(Button)`
+  ${BlockBase};
+`;
+
+export const ButtonBlockLight = styled(ButtonLight)`
+  ${BlockBase};
+`;
