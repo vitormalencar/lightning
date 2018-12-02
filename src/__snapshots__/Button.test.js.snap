@@ -3,7 +3,6 @@
 exports[`Renders with the default primary color 1`] = `
 .c0 {
   font-size: 1em;
-  margin: 1em;
   padding: 0.5em 1em;
   border-radius: 3px;
   border: 2px solid;
@@ -25,7 +24,6 @@ exports[`Renders with the default primary color 1`] = `
 exports[`changes the css props base on the theme  1`] = `
 .c0 {
   font-size: 1em;
-  margin: 1em;
   padding: 0.5em 1em;
   border-radius: 3px;
   border: 2px solid;
