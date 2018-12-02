@@ -17,16 +17,22 @@
     "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.1.4",
     "eslint": "^5.0.1",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
     "gh-pages": "^1.2.0",
+    "husky": "^1.2.0",
     "jest-styled-components": "^6.3.1",
+    "lint-staged": "^8.0.4",
     "polished": "^2.3.1",
+    "prettier": "1.15.3",
+    "pretty-quick": "^1.8.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
@@ -37,11 +43,31 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.1"
   },
   "files": [
     "dist"
   ],
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "stylelint './src/**/*.js'",
+      "git add"
+    ],
+    "*.{json,md,css,scss,yaml,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "jsnext:main": "dist/index.es.js",
   "license": "MIT",
   "main": "dist/index.js",
@@ -58,6 +84,8 @@
     "predeploy": "build-storybook -c .storybook -o .out",
     "prepare": "npm run build",
     "start": "rollup -c -w",
+    "lint": "eslint src/**/*.js",
+    "lint:css": "stylelint './src/**/*.js'",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom"

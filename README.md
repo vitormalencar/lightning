@@ -5,7 +5,10 @@
 lightning
 <br>
 <a href="https://circleci.com/gh/vitormalencar/lightning/">
-<img src="https://circleci.com/gh/vitormalencar/lightning/tree/master.svg?style=svg" alt="circleCi">
+  <img src="https://circleci.com/gh/vitormalencar/lightning/tree/master.svg?style=svg" alt="circleCi">
+</a>
+<a href="https://github.com/prettier/prettier">
+  <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier" />
 </a>
 </h1>
 
@@ -22,13 +25,13 @@ npm install --save lightning
 ## Usage
 
 ```jsx
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import MyComponent from "lightning";
+import MyComponent from 'lightning'
 
 class Example extends Component {
   render() {
-    return <MyComponent />;
+    return <MyComponent />
   }
 }
 ```
