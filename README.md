@@ -12,14 +12,14 @@ lightning
 </a>
 </h1>
 
-<p align="center">The <strong>Super</strong> component library</p>
+<p align="center">The  <strong>Super</strong> component library</p>
 
 ---
 
 ## Install
 
 ```bash
-npm install --save lightning
+npm install --save react-lightning-components
 ```
 
 ## Usage

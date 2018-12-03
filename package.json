@@ -1,7 +1,7 @@
 {
-  "name": "lightning",
+  "name": "react-lightning-components",
   "description": "react component ui library",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "vitormalencar",
   "dependencies": {
     "styled-components": "^4.1.2"
@@ -52,6 +52,13 @@
   "files": [
     "dist"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jsnext:main": "dist/index.es.js",
+  "license": "MIT",
   "lint-staged": {
     "*.{js,jsx}": [
       "pretty-quick --staged",
@@ -63,13 +70,6 @@
       "git add"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "jsnext:main": "dist/index.es.js",
-  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "peerDependencies": {
@@ -81,11 +81,11 @@
   "scripts": {
     "build": "rollup -c",
     "deploy": "gh-pages -d .out",
+    "lint": "eslint src/**/*.js",
+    "lint:css": "stylelint './src/**/*.js'",
     "predeploy": "build-storybook -c .storybook -o .out",
     "prepare": "npm run build",
     "start": "rollup -c -w",
-    "lint": "eslint src/**/*.js",
-    "lint:css": "stylelint './src/**/*.js'",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom"
