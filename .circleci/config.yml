@@ -31,7 +31,3 @@ jobs:
 
       # run tests!
       - run: npm run test
-
-      - run:
-          name: Deploy to GH pages
-          command: npm run deploy
