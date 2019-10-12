@@ -16,6 +16,8 @@ lightning
 
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vitormalencar/lightning.svg)](https://greenkeeper.io/)
+
 ## Install
 
 ```bash
