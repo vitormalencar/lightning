@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders with the default primary color 1`] = `
+.c0 {
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  border: 2px solid;
+  color: #ffff;
+  background-color: #5B6DFF;
+  border-color: #5B6DFF;
+}
+
+.c0:hover {
+  background-color: #001bf4;
+  border-color: #001bf4;
+}
+
+<button
+  className="c0"
+/>
+`;
+
+exports[`changes the css props base on the theme  1`] = `
+.c0 {
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  border: 2px solid;
+  color: #ffff;
+  background-color: #9F6EFF;
+  border-color: #9F6EFF;
+}
+
+.c0:hover {
+  background-color: #5b08ff;
+  border-color: #5b08ff;
+}
+
+<button
+  className="c0"
+/>
+`;
