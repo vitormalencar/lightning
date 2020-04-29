@@ -33,7 +33,7 @@
   "author": "vitormalencar",
   "module": "dist/lightning.esm.js",
   "devDependencies": {
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.9.6",
     "@storybook/addon-actions": "^5.3.13",
     "@storybook/addon-links": "^5.3.13",
     "@storybook/addons": "^5.3.13",
